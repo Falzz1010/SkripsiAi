@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-[#F4F3EE] dark:bg-dark-bg;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed text-base dark:text-dark-text;
+}
+
+.dark .prose {
+  @apply text-dark-text;
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-dark-border rounded-full;
+}
+
+/* Typography enhancements */
+.heading-gradient {
+  @apply text-black dark:text-dark-text font-black;
+}
+
+.chapter-title {
+  @apply text-2xl font-bold mb-4 tracking-tight;
+}
+
+.section-title {
+  @apply text-xl font-semibold mb-3;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-dark-card 
+         border-4 border-black dark:border-dark-border
+         shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(203,213,225,0.2)]
+         rounded-none;
+}
+
+/* Form styles */
+.input-focus {
+  @apply focus:ring-2 focus:ring-blue-500 dark:focus:ring-dark-accent focus:border-transparent 
+         dark:bg-dark-card dark:text-dark-text dark:border-dark-border
+         transition-all duration-200;
+}
+
+/* Neubrutalism styles */
+.btn-neubrutalism {
+  @apply border-4 border-black dark:border-dark-border
+         shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(203,213,225,0.2)]
+         hover:translate-x-[3px] hover:translate-y-[3px]
+         hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(203,213,225,0.2)]
+         transition-all duration-200;
+}
+
+/* Form input styles */
+.input-neubrutalism {
+  @apply border-4 border-black dark:border-white
+         shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]
+         focus:shadow-none focus:translate-x-[4px] focus:translate-y-[4px]
+         transition-all duration-200;
+}
+
+/* Add these new utility classes */
+@layer components {
+  .rotate-hover {
+    @apply hover:rotate-2 transition-transform duration-200;
+  }
+  
+  .marker-neubrutalism {
+    @apply before:content-[''] before:absolute before:left-0 before:top-0
+           before:w-4 before:h-full before:bg-[#FFD23F]
+           before:border-r-4 before:border-black dark:before:border-white;
+  }
+  
+  .chapter-title {
+    @apply text-2xl font-black uppercase mb-4 tracking-tight;
+  }
+
+  .section-title {
+    @apply text-xl font-black uppercase mb-3 tracking-tight;
+  }
+  
+  .prose {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .prose p {
+    @apply mb-6;
+  }
+  
+  .prose-neubrutalism {
+    @apply border-l-4 border-black dark:border-white pl-4;
+  }
+}
+
+/* Custom scrollbar with neubrutalism style */
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#F4F3EE] dark:bg-[#1A1A1A] border-l-4 border-black dark:border-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#FFD23F] border-4 border-black dark:border-white;
+}
+
+/* Toast responsive styles */
+.toast-mobile {
+  max-width: 280px !important;
+  font-size: 12px !important;
+  padding: 8px !important;
+}
+
+@media (min-width: 640px) {
+  .toast-large {
+    max-width: none !important;
+    border-width: 4px !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1) !important;
+  }
+}
+
+/* Additional mobile responsiveness */
+@media (max-width: 300px) {
+  .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  h1 {
+    font-size: 1.25rem !important;
+  }
+  
+  .step-text {
+    font-size: 0.65rem !important;
+  }
+}
+
