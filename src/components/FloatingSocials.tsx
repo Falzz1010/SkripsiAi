@@ -28,7 +28,7 @@ export default function FloatingSocials() {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/your-profile',
+      url: 'https://www.linkedin.com/in/naufal-rizky-putera/',
       color: 'bg-[#0077B5]'
     },
     {
@@ -46,7 +46,7 @@ export default function FloatingSocials() {
     {
       icon: <Globe className="w-5 h-5" />,
       label: 'Portfolio',
-      url: 'https://your-portfolio.com',
+      url: 'https://www.naufalrizkyp.my.id/',
       color: 'bg-[#10B981]'
     },
     {
